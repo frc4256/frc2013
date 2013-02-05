@@ -44,6 +44,7 @@
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Timeout" Type="Int">60</Property>
+		<Property Name="target.IOScan.Enabled" Type="Bool">true</Property>
 		<Property Name="target.IOScan.Faults" Type="Str"></Property>
 		<Property Name="target.IOScan.NetVarPeriod" Type="UInt">100</Property>
 		<Property Name="target.IOScan.NetWatchdogEnabled" Type="Bool">false</Property>
@@ -661,15 +662,9 @@ KeepAliveTimeout 60
 				<Item Name="WPI_CameraERRNoLoop.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraERRNoLoop.vi"/>
 				<Item Name="WPI_CameraWait for Raw Image String.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraWait for Raw Image String.vi"/>
 				<Item Name="WPI_CameraGet Image.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraGet Image.vi"/>
-				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
-				<Item Name="IMAQ Overlay Text" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Text"/>
-				<Item Name="IMAQ Overlay Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Rectangle"/>
-				<Item Name="IMAQ Clear Overlay" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Clear Overlay"/>
-				<Item Name="IMAQ Merge Overlay" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Merge Overlay"/>
 				<Item Name="Image Type" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Type"/>
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
 				<Item Name="NI_Vision_Development_Module.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/NI_Vision_Development_Module.lvlib"/>
-				<Item Name="Particle Parameters" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Particle Parameters"/>
 				<Item Name="WPI_CameraStart.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraStart.vi"/>
 				<Item Name="WPI_CameraStop.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraStop.vi"/>
 				<Item Name="WPI_CameraUpdate Camera Status.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraUpdate Camera Status.vi"/>
@@ -747,15 +742,16 @@ KeepAliveTimeout 60
 				<Item Name="WPI_EncoderClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderClose.vi"/>
 				<Item Name="WPI_EncoderReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderReset.vi"/>
 				<Item Name="SD Write Number.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/SD Write Number.vi"/>
+				<Item Name="NT Read Value.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/NT Read Value.vi"/>
+				<Item Name="NT Read Boolean Array.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/NT Read Boolean Array.vi"/>
+				<Item Name="NT Read Numeric Array.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/NT Read Numeric Array.vi"/>
+				<Item Name="NT Read String Array.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/NT Read String Array.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
 				<Item Name="RemoveNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/RemoveNamedSemaphorePrefix.vi"/>
 				<Item Name="Semaphore Refnum Core.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Refnum Core.ctl"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Validate Semaphore Size.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Validate Semaphore Size.vi"/>
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
-				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
-				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
-				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 			</Item>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -766,25 +762,16 @@ KeepAliveTimeout 60
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Compute Distance.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Compute Distance.vi"/>
-			<Item Name="Draw Filled Rect.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Draw Filled Rect.vi"/>
-			<Item Name="RT Overlay Helper.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/RT Overlay Helper.vi"/>
-			<Item Name="Normalized Range Compare.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Normalized Range Compare.vi"/>
-			<Item Name="Rectangularity Score.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Rectangularity Score.vi"/>
-			<Item Name="Aspect Ratio Score.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Aspect Ratio Score.vi"/>
-			<Item Name="Sorted Particle Report.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Sorted Particle Report.vi"/>
-			<Item Name="Score Particles.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Score Particles.vi"/>
-			<Item Name="Compute HSL Color Ranges.vi" Type="VI" URL="../../../../../../Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Compute HSL Color Ranges.vi"/>
+			<Item Name="Compute Distance.vi" Type="VI" URL="/Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Compute Distance.vi"/>
+			<Item Name="Draw Filled Rect.vi" Type="VI" URL="/Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Draw Filled Rect.vi"/>
+			<Item Name="RT Overlay Helper.vi" Type="VI" URL="/Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/RT Overlay Helper.vi"/>
+			<Item Name="Score Particles.vi" Type="VI" URL="/Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Score Particles.vi"/>
+			<Item Name="Compute HSL Color Ranges.vi" Type="VI" URL="/Program Files (x86)/National Instruments/LabVIEW 2012/examples/FRC/Vision/Rectangular Target - 2013/Compute HSL Color Ranges.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
 			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
 			<Item Name="niFpgaNodeNameForErrorReporting.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaNodeNameForErrorReporting.ctl"/>
 			<Item Name="niLvFpgaAdjustHostInterfaceError.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaAdjustHostInterfaceError.vi"/>
-			<Item Name="Joystick Event.ctl" Type="VI" URL="../../../../Downloads/Team 1736 Autoflex v1.1 %28Fixed%29 (1)/Joystick Event.ctl"/>
-			<Item Name="Playback.vi" Type="VI" URL="../Autoflex v1.1/Playback.vi"/>
-			<Item Name="Read Inputs.vi" Type="VI" URL="../Autoflex v1.1/Read Inputs.vi"/>
-			<Item Name="Duplicate Joystick Event.vi" Type="VI" URL="../../../../Downloads/Team 1736 Autoflex v1.1 %28Fixed%29 (1)/Duplicate Joystick Event.vi"/>
-			<Item Name="Record and Save.vi" Type="VI" URL="../Autoflex v1.1/Record and Save.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
